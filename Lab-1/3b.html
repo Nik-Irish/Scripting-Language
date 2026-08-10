@@ -6,15 +6,15 @@
     <title>Sum of Digits</title>
     <script>
         function sumOfDigits() {
-            let number = prompt("Please enter a number:");
-            let sum = 0;
+            let a = prompt("Please enter a number:");
+            let s = 0;
 
-            while (number > 0) {
-                sum += number % 10;
-                number = Math.floor(number / 10);
+            while (a > 0) {
+                s += a % 10;
+                a = Math.floor(a / 10);
             }
 
-            alert("The sum of the digits is: " + sum);
+            alert("The sum of the digits is: " + s);
         }
     </script>
 </head>

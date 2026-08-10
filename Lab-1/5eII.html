@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factorial Calculator</title>
-</head>
 <body>
     <h1>Factorial Calculator</h1>
-    <input type="number" id="number" placeholder="Enter a number" />
-    <button onclick="calculateFactorial()">Calculate Factorial</button>
+    <input type="number" id="num" placeholder="Enter a number" />
+    <button onclick="cf()">Calculate Factorial</button>
     <p id="result"></p>
 
     <script>
-        function calculateFactorial() {
-            const number = document.getElementById('number').value;
-            const result = factorial(number);
-            document.getElementById('result').innerText = 'Factorial of ' + number + ' is ' + result;
+        function cf() {
+            const n = document.getElementById('num').value;
+            const r = factorial(n);
+            document.getElementById('result').innerText = 'Factorial of ' + n + ' is ' + r;
         }
 
         function factorial(n) {
-            let fact = 1;
+            let f = 1;
             for (let i = 1; i <= n; i++) {
-                fact *= i;
+                f *= i;
             }
-            return fact;
+            return f;
         }
     </script>
     <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>

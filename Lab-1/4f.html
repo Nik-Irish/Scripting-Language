@@ -6,32 +6,30 @@
     <title>Array Methods Example</title> <!-- Sets the title of the document displayed in the browser tab -->
 </head>
 <body>
-    <h1>Array Methods Demonstration</h1> <!-- Main heading of the page -->
-    <div id="output"></div> <!-- Placeholder for displaying output results -->
+    <div id="o"></div> <!-- Placeholder for displaying o results -->
 
     <script>
-        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // Initializes an array of numbers
+        const n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // Initializes an array of n
 
-        const output = []; // Creates an empty array to store output results
+        const o = []; // Creates an empty array to store o result
+        o.push("Includes: " + n.includes(5)); // Checks if the number 5 is included in the array and adds the result to o
+        o.push("Find: " + n.find(num => num > 5)); // Finds the first number greater than 5 and adds it to o
+        o.push("Find Index: " + n.findIndex(num => num > 5)); // Finds the index of the first number greater than 5 and adds it to o
+        o.push("Index Of: " + n.indexOf(5)); // Finds the index of the number 5 in the array and adds it to o
+        o.push("Last Index Of: " + n.lastIndexOf(5)); // Finds the last index of the number 5 in the array and adds it to o
+        o.push("Join: " + n.join("1, ")); // Joins the array elements into a string separated by commas and adds it to o
+        o.push("Concat: " + n.concat([11, 12, 13])); // Concatenates the array with another array and adds the result to o
+        o.push("Pop: " + n.pop()); // Removes the last element from the array and adds it to o
+        o.push("Push: " + n.push(11)); // Adds the number 11 to the end of the array and adds the new length to o
+        o.push("Reverse: " + n.reverse()); // Reverses the order of the array elements and adds the result to o
+        o.push("Shift: " + n.shift()); // Removes the first element from the array and adds it to o
+        o.push("Unshift: " + n.unshift(0)); // Adds the number 0 to the beginning of the array and adds the new length to o
+        o.push("Slice: " + n.slice(2, 5)); // Extracts a portion of the array from index 2 to 5 and adds it to o
+        o.push("Map: " + n.map(num => num * 2)); // Creates a new array with each element multiplied by 2 and adds it to o
+        o.push("Sort: " + n.sort((a, b) => a - b)); // Sorts the array in ascending order and adds the result to o
+        o.push("Every: " + n.every(num => num > 5)); // Checks if all elements in the array are greater than 5 and adds the result to o
 
-        output.push("Includes: " + numbers.includes(5)); // Checks if the number 5 is included in the array and adds the result to output
-        output.push("Find: " + numbers.find(num => num > 5)); // Finds the first number greater than 5 and adds it to output
-        output.push("Find Index: " + numbers.findIndex(num => num > 5)); // Finds the index of the first number greater than 5 and adds it to output
-        output.push("Index Of: " + numbers.indexOf(5)); // Finds the index of the number 5 in the array and adds it to output
-        output.push("Last Index Of: " + numbers.lastIndexOf(5)); // Finds the last index of the number 5 in the array and adds it to output
-        output.push("Join: " + numbers.join("1, ")); // Joins the array elements into a string separated by commas and adds it to output
-        output.push("Concat: " + numbers.concat([11, 12, 13])); // Concatenates the array with another array and adds the result to output
-        output.push("Pop: " + numbers.pop()); // Removes the last element from the array and adds it to output
-        output.push("Push: " + numbers.push(11)); // Adds the number 11 to the end of the array and adds the new length to output
-        output.push("Reverse: " + numbers.reverse()); // Reverses the order of the array elements and adds the result to output
-        output.push("Shift: " + numbers.shift()); // Removes the first element from the array and adds it to output
-        output.push("Unshift: " + numbers.unshift(0)); // Adds the number 0 to the beginning of the array and adds the new length to output
-        output.push("Slice: " + numbers.slice(2, 5)); // Extracts a portion of the array from index 2 to 5 and adds it to output
-        output.push("Map: " + numbers.map(num => num * 2)); // Creates a new array with each element multiplied by 2 and adds it to output
-        output.push("Sort: " + numbers.sort((a, b) => a - b)); // Sorts the array in ascending order and adds the result to output
-        output.push("Every: " + numbers.every(num => num > 5)); // Checks if all elements in the array are greater than 5 and adds the result to output
-
-        document.getElementById("output").innerHTML = output.join("<br>"); // Displays the output results in the HTML element with id "output"
+        document.getElementById("o").innerHTML = o.join("<br>"); // Displays the o results in the HTML element with id "o"
     </script>
     <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
 </body>

@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Function Invocation Techniques</title>
-</head>
 <body>
     <h3>Function Invocation Techniques in Js</h3>
     <div id="output"></div>
@@ -37,8 +32,8 @@
             return `Hello, ${this.name}!`;
         }
         const user = { name: "Hari" };
-        const helloUsingCall = sayHello.call(user);
-        const helloUsingApply = sayHello.apply(user);
+        const hUC = sayHello.call(user);
+        const hUA = sayHello.apply(user);
 
         // Implicit function invocation
         const implicitObj = {
@@ -53,8 +48,8 @@
             <p>${greet()}</p>
             <p>${obj.greet()}</p>
             <p>${Nik.greet()}</p>
-            <p>${helloUsingCall}</p>
-            <p>${helloUsingApply}</p>
+            <p>${hUC}</p>
+            <p>${hUA}</p>
             <p>${implicitObj.greet()}</p>
         `;
         document.getElementById('output').innerHTML = output;

@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Arguments by Value</title>
-</head>
 <body>
     <h2>Arguments in JS are Passed by Value</h2>
     <script>
         // Function to change the value of the parameter 'num'
-        function changeValue(num) {
-            num = 10; // Assigns the value 10 to 'num'
-            return num; // Returns the modified value of 'num'
+        function changeValue(a) {
+            a = 10; // Assigns the value 10 to 'a'
+            return a; // Returns the modified value of 'a'
         }
 
-        let originalValue = 5; // Initializes 'originalValue' with 5
-        let newValue = changeValue(originalValue); // Calls 'changeValue' with 'originalValue'
+        let ov = 5; // Initializes 'originalValue' with 5
+        let nv = changeValue(ov); // Calls 'changeValue' with 'originalValue'
 
-        document.write("Original Value: " + originalValue + "<br>"); // Displays the original value
-        document.write("New Value: " + newValue + "<br>"); // Displays the new value returned by the function
+        document.write("Original Value: " + ov + "<br>"); // Displays the original value
+        document.write("New Value: " + nv + "<br>"); // Displays the new value returned by the function
     </script>
     <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
 </body>
