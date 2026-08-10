@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer and Image Description</title>
+    <style>
+        body {
+            transition: background-color 0.5s;
+        }
+        img {
+            width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Select a Background Color</h1>
+    <label>
+        <input type="radio" name="color" value="red" onclick="changeColor('red')"> Red
+    </label>
+    <label>
+        <input type="radio" name="color" value="green" onclick="changeColor('green')"> Green
+    </label>
+    <label>
+        <input type="radio" name="color" value="white" onclick="changeColor('white')"> White
+    </label>
+
+    <h2>Hover over the image</h2>
+    <img src="greenapple.jpg" alt="Description of the image" onmouseover="showDescription()" onmouseout="hideDescription()">
+    <p id="description" style="display:none;">This is a image of Green Apple</p>
+
+    <script>
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        function showDescription() {
+            document.getElementById('description').style.display = 'block';
+        }
+
+        function hideDescription() {
+            document.getElementById('description').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

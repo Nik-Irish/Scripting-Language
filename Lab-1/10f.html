@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event Handling</title>
+</head>
+<body>
+    
+    <form id="myForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username"">
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="log" style="font-weight: bold; color: blue;"></p>
+
+    <script>
+        const input = document.getElementById('username');
+        const form = document.getElementById('myForm');
+        const log = document.getElementById('log');
+
+        // 1. Focus Event
+        input.addEventListener('focus', function() {
+            log.innerText = "Event Triggered: Input field is focused.";
+        });
+
+        // 2. Blur Event
+        input.addEventListener('blur', function() {
+            log.innerText = "Event Triggered: Input field lost focus (blur).";
+        });
+
+        // 3. Change Event
+        input.addEventListener('change', function() {
+            log.innerText = "Event Triggered: Value changed to '" + input.value + "'.";
+        });
+
+        // 4. Submit Event
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents page reload
+            log.innerText = "Event Triggered: Form submitted successfully!";
+        });
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

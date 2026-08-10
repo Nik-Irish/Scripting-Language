@@ -1,0 +1,28 @@
+/*Number Classification*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Classification</title>
+    <script>
+        function classifyNumber() {
+            var number = prompt("Please enter a number:");
+            if (number >= 0 && number < 10) {
+                alert("This is a single digit number.");
+            } else if (number >= 10 && number < 100) {
+                alert("This is a double digit number.");
+            } else if (number >= 100 && number < 1000) {
+                alert("This is a triple digit number.");
+            } else if (number >= 1000) {
+                alert("This is a multi digit number.");
+            } else {
+                alert("Please enter a valid number.");
+            }
+        }
+    </script>
+</head>
+<body onload="classifyNumber()">
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

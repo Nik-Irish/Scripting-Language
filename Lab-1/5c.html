@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Invocation Techniques</title>
+</head>
+<body>
+    <h3>Function Invocation Techniques in Js</h3>
+    <div id="output"></div>
+
+    <script>
+        // As functions
+        function greet() {
+            return "Hello from a function!";
+        }
+
+        // As methods
+        const obj = {
+            message: "Hello from a method!",
+            greet: function() {
+                return this.message;
+            }
+        };
+
+        // As constructors
+        function Person(name) {
+            this.name = name;
+            this.greet = function() {
+                return `Hello, my name is ${this.name}!`;
+            };
+        }
+        const Nik = new Person("Nikrish");
+
+        // Indirectly through call() and apply() methods
+        function sayHello() {
+            return `Hello, ${this.name}!`;
+        }
+        const user = { name: "Hari" };
+        const helloUsingCall = sayHello.call(user);
+        const helloUsingApply = sayHello.apply(user);
+
+        // Implicit function invocation
+        const implicitObj = {
+            name: "Mike",
+            greet: function() {
+                return `Hi, I'm ${this.name}!`;
+            }
+        };
+
+        // Displaying results
+        const output = `
+            <p>${greet()}</p>
+            <p>${obj.greet()}</p>
+            <p>${Nik.greet()}</p>
+            <p>${helloUsingCall}</p>
+            <p>${helloUsingApply}</p>
+            <p>${implicitObj.greet()}</p>
+        `;
+        document.getElementById('output').innerHTML = output;
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

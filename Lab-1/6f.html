@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getters and Setters Example</title>
+</head>
+<body>
+    <h1>Getters and Setters in Js</h1>
+    <script>
+        const person = {
+            firstName: 'John',
+            lastName: 'Doe',
+            get fullName() {
+                return 'Hello, my name is ' + this.firstName + ' ' + this.lastName;
+            },
+            set fullName(name) {
+                const parts = name.split(' ');
+                this.firstName = parts[0];
+                this.lastName = parts[1];
+            }
+        };
+
+        document.write("Full Name: " + person.fullName + "<br>"); // John Doe
+        person.fullName = 'Jane Smith';
+        document.write("First Name: " + person.firstName + "<br>"); // Jane
+        document.write("Last Name: " + person.lastName + "<br>"); // Smith
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

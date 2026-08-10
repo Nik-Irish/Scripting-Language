@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring JS Objects</title>
+</head>
+<body>
+
+    <h1>JavaScript Objects</h1>
+
+    <script>
+        // 1. MATH OBJECT (For mathematical tasks)
+        document.write("<h3>1. Math Object</h3>");
+        document.write("Value of PI: " + Math.PI + "<br>");
+        document.write("Square root of 16: " + Math.sqrt(16) + "<br>");
+        document.write("Round down 4.7: " + Math.floor(4.7) + "<br>");
+        document.write("Round up 4.3: " + Math.ceil(4.3) + "<br><hr>");
+
+        // 2. STRING OBJECT (For text manipulation)
+        document.write("<h3>2. String Object</h3>");
+        let text = "hello javascript";
+        document.write("Original Text: " + text + "<br>");
+        document.write("Length of text: " + text.length + "<br>");
+        document.write("Uppercase text: " + text.toUpperCase() + "<br><hr>");
+
+        // 3. NUMBER OBJECT (For number operations)
+        document.write("<h3>3. Number Object</h3>");
+        document.write("Is 4.5 an integer? " + Number.isInteger(4.5) + "<br>");
+        document.write("Maximum safe number: " + Number.MAX_SAFE_INTEGER + "<br><hr>");
+
+        // 4. ARRAY OBJECT (For storing lists of data)
+        document.write("<h3>4. Array Object</h3>");
+        let colors = ["Red", "Green", "Blue"];
+        document.write("Array elements: " + colors + "<br>");
+        document.write("Total items in array: " + colors.length + "<br>");
+        document.write("Joined as text: " + colors.join(" - ") + "<br><hr>");
+
+        // 5. OBJECT OBJECT (For key-value pairs)
+        document.write("<h3>5. Object Object</h3>");
+        let student = { name: "Alice", grade: "A" };
+        document.write("Keys of object: " + Object.keys(student) + "<br>");
+        document.write("Values of object: " + Object.values(student) + "<br>");
+    </script>
+<P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

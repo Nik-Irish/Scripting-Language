@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Object Setter Methods</title>
+</head>
+<body>
+    <!--This is a code no need to be changed-->
+    <div id="dateDisplay"></div>
+    <script>
+        const date = new Date();
+
+        date.setDate(15);
+        date.setDay(3); // Setting to Tuesday
+        date.setFullYear(2023);
+        date.setHours(10);
+        date.setMonth(5); // June (months are 0-indexed)
+        date.setMilliseconds(500);
+        date.setSeconds(30);
+        date.setMinutes(45);
+        date.setYear(2023); // Deprecated, use setFullYear instead
+        date.setUTCFullYear(2023);
+        date.setUTCDay(3); // Setting to Tuesday in UTC
+        date.setUTCDate(15);
+        date.setUTCMonth(5); // June in UTC
+
+        document.getElementById('dateDisplay').innerText = date.toUTCString();
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

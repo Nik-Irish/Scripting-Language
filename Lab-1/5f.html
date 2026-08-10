@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameters in JavaScript</title>
+</head>
+<body>
+    <h1>Default Parameters in JavaScript</h1>
+    <script>
+        function greet(name = "Guest", greeting = "Hello") {
+            return'   '+ greeting + ', ' + name + '!';
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const message1 = greet();
+            const message2 = greet("Alice");
+            const message3 = greet("Bob", "Welcome");
+
+            document.body.innerHTML += '<p>' + message1 + '</p>';
+            document.body.innerHTML += '<p>' + message2 + '</p>';
+            document.body.innerHTML += '<p>' + message3 + '</p>';
+        });
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

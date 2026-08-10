@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literal Example</title>
+</head>
+<body>
+    <script>
+        // Creating an object using object literal
+        const person = {
+            name: "Nikrish Dulal",
+            age: 21,
+            greet: function() {
+                return 'Hello, my name is ' + this.name + ' and I am ' + this.age + ' years old.';
+            }
+        };
+
+        // Accessing properties of the object
+        document.write("Name: " + person.name + "<br>"); // Output: Nikrish Dulal
+        document.write("Age: " + person.age + "<br>");  // Output: 21
+        document.write(person.greet() + "<br>"); // Output: Hello, my name is Nikrish Dulal and I am 21 years old.
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

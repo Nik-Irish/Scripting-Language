@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event Handling</title>
+    <style>
+        #eventBox {
+            width: 150px;
+            height: 100px;
+            border: 2px solid #000;
+            display: flex;
+            align-items: top;
+            justify-content: center;
+            margin: 20px;
+            transition: background-color 0.1s;
+        }
+    </style>
+</head>
+<body>
+
+<div id="eventBox">Touch Pad</div>
+<p id="eventInfo"></p>
+
+<script>
+    const eventBox = document.getElementById('eventBox');
+    const eventInfo = document.getElementById('eventInfo');
+
+    eventBox.addEventListener('click', () => {
+        eventInfo.textContent = 'Box Clicked!';
+    });
+
+    eventBox.addEventListener('mouseover', () => {
+        eventBox.style.backgroundColor = 'lightblue';
+        eventInfo.textContent = 'Mouse Over!';
+    });
+
+    eventBox.addEventListener('mouseout', () => {
+        eventBox.style.backgroundColor = '';
+        eventInfo.textContent = 'Mouse Out!';
+    });
+
+    eventBox.addEventListener('mousedown', () => {
+        eventInfo.textContent = 'Mouse Down!';
+    });
+
+    eventBox.addEventListener('mouseup', () => {
+        eventInfo.textContent = 'Mouse Up!';
+    });
+
+    eventBox.addEventListener('mousemove', (event) => {
+        eventInfo.textContent = 'Mouse Position: X: ' + event.clientX + ', Y: ' + event.clientY;
+    });
+</script>
+<P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First 10 Odd Numbers</title>
+</head>
+<body>
+    <h1>First 10 Odd Numbers</h1>
+    <ul id="oddNumbersList"></ul>
+
+    <script>
+        function displayOddNumbers() {
+            const oddNumbersList = document.getElementById('oddNumbersList');
+            for (let i = 1; i <= 20; i += 2) {
+                const listItem = document.createElement('li');
+                listItem.textContent = i;
+                oddNumbersList.appendChild(listItem);
+            }
+        }
+
+        displayOddNumbers();
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

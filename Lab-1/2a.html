@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even or Odd Checker</title>
+    <script>
+        function checkEvenOrOdd() {
+            var number = prompt("Please enter a number:");
+            if (number !== null) {
+                number = parseInt(number);
+                if (number % 2 === 0) {
+                    alert(number + " is an even number.");
+                } else {
+                    alert(number + " is an odd number.");
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="checkEvenOrOdd()">
+    <h1>Welcome to the Even or Odd Checker!</h1>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

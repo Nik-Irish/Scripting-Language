@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator Object</title>
+</head>
+<body>
+    <h1>Navigator Object Properties and Methods</h1>
+    <div id="info"></div>
+    <script>
+        const infoDiv = document.getElementById('info');
+
+        // Displaying navigator properties
+        infoDiv.innerHTML += '<p><strong>App Name:</strong> ' + navigator.appName + '</p>';
+        infoDiv.innerHTML += '<p><strong>App Version:</strong> ' + navigator.appVersion + '</p>';
+        infoDiv.innerHTML += '<p><strong>User Agent:</strong> ' + navigator.userAgent + '</p>';
+        infoDiv.innerHTML += '<p><strong>Platform:</strong> ' + navigator.platform + '</p>';
+        infoDiv.innerHTML += '<p><strong>Language:</strong> ' + navigator.language + '</p>';
+
+        // Checking if the browser is online
+        if (navigator.onLine) {
+            infoDiv.innerHTML += '<p>You are online!</p>';
+        } else {
+            infoDiv.innerHTML += '<p>You are offline!</p>';
+        }
+
+        // Displaying the browser's cookie enabled status
+        infoDiv.innerHTML += '<p><strong>Cookies Enabled:</strong> ' + navigator.cookieEnabled + '</p>';
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Object</title>
+</head>
+<body>
+    <h1>History Object Demonstration</h1>
+    <p>Current history length: <span id="historyLength"></span></p>
+    <button onclick="goBack()">Go Back</button>
+    <button onclick="goForward()">Go Forward</button>
+    <button onclick="goToPage()">Go to Page 2</button>
+
+    <script>
+        // Display the length of the history
+        document.getElementById('historyLength').innerText = history.length;
+
+        function goBack() {
+            history.back();
+        }
+
+        function goForward() {
+            history.forward();
+        }
+
+        function goToPage() {
+            history.go(1); // Change the number to navigate to different pages
+        }
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

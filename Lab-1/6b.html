@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object.create() Example</title>
+</head>
+<body>
+    <h1>Demonstrating Object Creation</h1>
+    <script>
+        // Parent object
+        const animal = {
+            eats: true
+        };
+
+        // Creating a new object using Object.create()
+        const rabbit = Object.create(animal);
+        rabbit.hops = true;
+
+        document.write("Does the Rabbit Eat?<br>--> " + rabbit.eats + "<br>"); // true
+        document.write("Does the Rabbit Hop?<br>--> " + rabbit.hops + "<br>"); // true
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

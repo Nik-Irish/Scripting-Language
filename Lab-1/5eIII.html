@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even or Odd Sum</title>
+    <script>
+        function checkEvenOdd() {
+            var num1 = parseInt(document.getElementById("number1").value);
+            var num2 = parseInt(document.getElementById("number2").value);
+            var sum = num1 + num2;
+            var result = (sum % 2 === 0) ? "even" : "odd";
+            document.getElementById("result").innerText = "The sum is " + result + ".";
+        }
+    </script>
+</head>
+<body>
+    <h1>Check Sum is Even or Odd</h1>
+    <input type="number" id="number1" placeholder="Enter first number"> +
+    <input type="number" id="number2" placeholder="Enter second number">
+    <button onclick="checkEvenOdd()">Check</button>
+    <p id="result"></p>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

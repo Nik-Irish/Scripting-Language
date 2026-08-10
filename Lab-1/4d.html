@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For-of and For-in Example</title>
+</head>
+<body>
+    <h1>For-of and For-in Statements in JavaScript</h1>
+    <script>
+        // For-in example
+        const person = { name: 'Nikrish', age: 21, city: 'KTM' };
+        let personInfo = '';
+        for (let key in person) {
+            personInfo += `${key}: ${person[key]}<br>`;
+        }
+        document.write('<h2>For-in Output:</h2>');
+        document.write(personInfo);
+
+        // For-of example
+        const fruits = ['Apple', 'Banana', 'Cherry'];
+        let fruitList = '';
+        for (let fruit of fruits) {
+            fruitList += `${fruit}<br>`;
+        }
+        document.write('<h2>For-of Output:</h2>');
+        document.write(fruitList);
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

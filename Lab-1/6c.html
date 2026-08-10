@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Function</title>
+</head>
+<body>
+    <script>
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        const p1 = new Person('Nikrish', 21);
+        const p2 = new Person('Jimmy', 27);
+        const p3 = new Person('Chandler', 29);
+
+        document.write("Person 1: " + p1.name + ", Age: " + p1.age + "<br>");
+        document.write("Person 2: " + p2.name + ", Age: " + p2.age + "<br>");
+        document.write("Person 3: " + p3.name + ", Age: " + p3.age + "<br>");
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

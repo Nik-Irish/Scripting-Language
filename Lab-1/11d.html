@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval and ClearInterval</title>
+    <style>
+        #counter {
+            font-size: 50px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="counter">0</div>
+    <button id="startButton">Start</button>
+    <button id="stopButton">Stop</button>
+
+    <script>
+        let count = 0;
+        let intervalId;
+
+        document.getElementById('startButton').addEventListener('click', function() {
+            intervalId = setInterval(function() {
+                count++;
+                document.getElementById('counter').innerText = count;
+            }, 1000);
+        });
+
+        document.getElementById('stopButton').addEventListener('click', function() {
+            clearInterval(intervalId);
+            intervalId = null;
+        });
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

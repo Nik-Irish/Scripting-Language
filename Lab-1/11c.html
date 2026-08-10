@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout and clearTimeout Example</title>
+    <style>
+        #message {
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <button id="startButton">Start Timer</button>
+    <button id="stopButton">Stop Timer</button>
+    <div id="message"></div>
+
+    <script>
+        let timer;
+
+        document.getElementById('startButton').onclick = function() {
+            timer = setTimeout(function() {
+                document.getElementById('message').innerText = "Time's up!";
+            }, 5000);
+        };
+
+        document.getElementById('stopButton').onclick = function() {
+            clearTimeout(timer);
+            document.getElementById('message').innerText = "Timer stopped!";
+        };
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

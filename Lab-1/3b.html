@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Digits</title>
+    <script>
+        function sumOfDigits() {
+            let number = prompt("Please enter a number:");
+            let sum = 0;
+
+            while (number > 0) {
+                sum += number % 10;
+                number = Math.floor(number / 10);
+            }
+
+            alert("The sum of the digits is: " + sum);
+        }
+    </script>
+</head>
+<body>
+    <h1>Sum of Digits</h1>
+    <button onclick="sumOfDigits()">Calculate Sum of Digits</button>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

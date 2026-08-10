@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous and Arrow Functions in JS</title>
+</head>
+<body>
+    <h1>Anonymous and Arrow Functions in JavaScript</h1>
+    <div id="output"></div>
+
+    <script>
+        // Anonymous Function
+        const anonymousFunction = function(name) {
+            return 'Hello, ' + name + '! This is an anonymous function.';
+        };
+
+        // Arrow Function
+        const arrowFunction = (name) => {
+            return 'Hello, ' + name + '! This is an arrow function.';
+        };
+
+        // Output results
+        document.getElementById('output').innerHTML = `
+            <p>${anonymousFunction('Ram')}</p>
+            <p>${arrowFunction('Nik')}</p>
+        `;
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>
+    

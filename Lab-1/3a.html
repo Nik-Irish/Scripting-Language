@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+</head>
+<body>
+    <div id="table"></div>
+
+    <script>
+        let number = prompt("Enter a number to see its multiplication table:");
+        let tableDiv = document.getElementById("table");
+        let tableHTML = '<h2>Multiplication Table of ' + number + '</h2><ul>';
+
+        for (let i = 1; i <= 10; i++) {
+            tableHTML += '<li>' + number + ' x ' + i + ' = ' + (number * i) + '</li>';
+        }
+
+        tableHTML += '</ul>';
+        tableDiv.innerHTML = tableHTML;
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

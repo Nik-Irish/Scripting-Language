@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Techniques</title>
+</head>
+<body>
+    <h3>Event Registration Techniques</h3>
+
+    <!-- 1. Inline Event Handler -->
+    <button onclick="alert('Inline')">1. Inline Event</button>
+
+    <!-- 2. Event Handler Property -->
+    <button id="btnProperty">2. Event Handler Property</button>
+
+    <!-- 3. Event Listener -->
+    <button id="btnListener">3. Add Event Listener</button>
+
+    <script>
+        // 2. Event Handler Property Technique
+        const btnProperty = document.getElementById('btnProperty');
+        btnProperty.onclick = function() {
+            alert('Event Handling');
+        };
+
+        // 3. addEventListener Technique (Recommended)
+        const btnListener = document.getElementById('btnListener');
+        btnListener.addEventListener('click', function() {
+            alert('addEventListener');
+        });
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Element from Array</title>
+</head>
+<body>
+    <h1>Delete Element from Array</h1>
+    <script>
+        let array = [10, 20, 30, 40, 50];
+        let position = prompt("Enter the position of the element to delete (0 to " + (array.length - 1) + "):");
+
+        if (position >= 0 && position < array.length) {
+            array.splice(position, 1);
+            alert("Updated Array: " + array);
+        } else {
+            alert("Invalid position!");
+        }
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

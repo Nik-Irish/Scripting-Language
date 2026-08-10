@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Creation in JavaScript</title>
+</head>
+<body>
+    <h1>Array Creation in JS</h1>
+    <div id="output"></div>
+
+    <script>
+        // Method 1: Using Array Literal
+        const array1 = [1, 2, 3, 4, 5];
+
+        // Method 2: Using the Array Constructor
+        const array2 = new Array(6, 7, 8, 9, 10);
+
+        // Method 3: Using Array.of()
+        const array3 = Array.of(11, 12, 13, 14, 15);
+
+        // Method 4: Using Array.from()
+        const array4 = Array.from([16, 17, 18, 19, 20]);
+
+        // Displaying the arrays
+        const outputDiv = document.getElementById('output');
+        outputDiv.innerHTML = `
+            <h4>Array 1: ${array1}</h4>
+            <h4>Array 2: ${array2}</h4>
+            <h4>Array 3: ${array3}</h4>
+            <h4>Array 4: ${array4}</h4>
+        `;
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>

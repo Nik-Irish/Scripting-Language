@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Node Properties</title>
+</head>
+<body>
+    <h1>DOM Node Properties Demo</h1>
+    <div id="d1"></div>
+
+    <script>
+        const d = document.getElementById('d1');
+        const sn = document.createElement('div');
+        sn.textContent = "Hello, I'm Nikrish Dulal";
+        document.body.appendChild(sn);
+
+        d.innerHTML += '<p>Node Name: ' + sn.nodeName + '</p>';
+        d.innerHTML += '<p>Node Type: ' + sn.nodeType + '</p>';
+        d.innerHTML += '<p>Last Child: ' + document.body.lastChild.nodeName + '</p>';
+        d.innerHTML += '<p>Node Value: ' + sn.nodeValue + '</p>';
+        d.innerHTML += '<p>Parent Node: ' + sn.parentNode.nodeName + '</p>';
+        d.innerHTML += '<p>Next Sibling: ' + (sn.nextSibling ? sn.nextSibling.nodeName : 'None') + '</p>';
+        d.innerHTML += '<p>Previous Sibling: ' + (sn.previousSibling ? sn.previousSibling.nodeName : 'None') + '</p>';
+        d.innerHTML += '<p>Child Nodes: ' + sn.childNodes.length + '</p>';
+        d.innerHTML += '<p>First Child: ' + (sn.firstChild ? sn.firstChild.nodeName : 'None') + '</p>';
+    </script>
+    
+</body>
+</html>

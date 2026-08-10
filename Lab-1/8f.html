@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Calculator</title>
+</head>
+<body>
+    <h1>Date Calculator</h1>
+    <label for="days">Enter Days:</label>
+    <input type="number" id="days">
+    <br>
+    <label for="hours">Enter Hours:</label>
+    <input type="number" id="hours">
+    <br>
+    <button onclick="calculateDates()">Calculate</button>
+    <h2>Results:</h2>
+    <p id="beforeDate"></p>
+    <p id="afterDate"></p>
+
+    <script>
+        function calculateDates() {
+            const days = parseInt(document.getElementById('days').value);
+            const hours = parseInt(document.getElementById('hours').value);
+            const currentDate = new Date();
+            const bd = new Date(currentDate);
+            const ad = new Date(currentDate);
+
+            bd.setDate(currentDate.getDate() - days);
+            bd.setHours(currentDate.getHours() - hours);
+            ad.setDate(currentDate.getDate() + days);
+            ad.setHours(currentDate.getHours() + hours);
+
+            document.getElementById('beforeDate').innerText = 'Date before: ' + bd.toString();
+            document.getElementById('afterDate').innerText = 'Date after: ' + ad.toString();
+        }
+    </script>
+    <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
+</body>
+</html>
