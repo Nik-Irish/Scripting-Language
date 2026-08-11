@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rest Parameters in js</title>
-</head>
 <body>
     <h1>Rest Parameters in js</h1>
     <script>
-        function sum(...numbers) {
+        function s(...numbers) {
             return numbers.reduce((acc, curr) => acc + curr, 0);
         }
 
-        const result = sum(1, 2, 3, 4, 5);
+        const result = s(1, 2, 3, 4, 5);
         document.write('The sum of the numbers is: ' + result + '<br>');
     </script>
     <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
 </body>
+</html>

@@ -6,16 +6,16 @@
     <title>Arguments Object in JS Function</title>
 </head>
 <body>
-    <button onclick="displayArguments('Hello', 'World', 2067)">Click Me!</button>
-    <p id="output"></p>
+    <button onclick="d('Hello', 'World', 2006)">Click Me!</button>
+    <p id="o"></p>
 
     <script>
-        function displayArguments() {
-            let output = "Arguments: ";
+        function d() {
+            let a = "Arguments: ";
             for (let i = 0; i < arguments.length; i++) {
-                output += arguments[i] + " ";
+                a += arguments[i] + " ";
             }
-            document.getElementById("output").innerText = output;
+            document.getElementById("o").innerText = a;
         }
     </script>
     <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
