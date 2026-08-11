@@ -10,22 +10,22 @@
     <div id="date-info"></div>
 
     <script>
-        const date = new Date();
+        const d = new Date();
         const dateInfo = `
-            <p>Current Date: ${date.getDate()}</p>
-            <p>Current Day: ${date.getDay()}</p>
-            <p>Current Year: ${date.getFullYear()}</p>
-            <p>Current Hours: ${date.getHours()}</p>
-            <p>Current Month: ${date.getMonth()}</p>
-            <p>Current Milliseconds: ${date.getMilliseconds()}</p>
-            <p>Current Seconds: ${date.getSeconds()}</p>
-            <p>Current Minutes: ${date.getMinutes()}</p>
-            <p>Timezone Offset: ${date.getTimezoneOffset()}</p>
-            <p>Current Year (1970): ${date.getYear()}</p>
-            <p>Current UTC Year: ${date.getUTCFullYear()}</p>
-            <p>Current UTC Day: ${date.getUTCDay()}</p>
-            <p>Current UTC Date: ${date.getUTCDate()}</p>
-            <p>Current UTC Month: ${date.getUTCMonth()}</p>
+            <p>Current Date: ${d.getDate()}</p>
+            <p>Current Day: ${d.getDay()}</p>
+            <p>Current Year: ${d.getFullYear()}</p>
+            <p>Current Hours: ${d.getHours()}</p>
+            <p>Current Month: ${d.getMonth()}</p>
+            <p>Current Milliseconds: ${d.getMilliseconds()}</p>
+            <p>Current Seconds: ${d.getSeconds()}</p>
+            <p>Current Minutes: ${d.getMinutes()}</p>
+            <p>Timezone Offset: ${d.getTimezoneOffset()}</p>
+            <p>Current Year (1970): ${d.getYear()}</p>
+            <p>Current UTC Year: ${d.getUTCFullYear()}</p>
+            <p>Current UTC Day: ${d.getUTCDay()}</p>
+            <p>Current UTC Date: ${d.getUTCDate()}</p>
+            <p>Current UTC Month: ${d.getUTCMonth()}</p>
         `;
         document.getElementById('date-info').innerHTML = dateInfo;
     </script>

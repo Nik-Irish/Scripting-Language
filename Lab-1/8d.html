@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age Calculator</title>
-</head>
 <body>
     <h1>Age Calculator</h1>
     <label for="dob">Date of Birth:</label>
@@ -18,26 +13,26 @@
     <script>
         function calculateAge() {
             let dob = new Date(document.getElementById('dob').value);
-            let today = new Date();            
+            let t = new Date();            
 
-            let years = today.getFullYear() - dob.getFullYear();
-            let months = today.getMonth() - dob.getMonth();
-            let days = today.getDate() - dob.getDate();
+            let y = t.getFullYear() - dob.getFullYear();
+            let m = t.getMonth() - dob.getMonth();
+            let d = t.getDate() - dob.getDate();
 
-            if (days < 0) {
-                months--;
+            if (d < 0) {
+                m--;
                 // Get days in previous month
-                let prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
-                days += prevMonth.getDate();
+                let prevMonth = new Date(t.getFullYear(), t.getMonth(), 0);
+                d += prevMonth.getDate();
             }
 
-            if (months < 0) {
-                years--;
-                months += 12;
+            if (m < 0) {
+                y--;
+                m += 12;
             }
 
-            document.getElementById('yearsResult').innerText = "Age: " + years + " years old";
-            document.getElementById('detailResult').innerText = "Age in details: " + years + " years, " + months + " months, and " + days + " days";
+            document.getElementById('yearsResult').innerText = "Age: " + y + " years old";
+            document.getElementById('detailResult').innerText = "Age in details: " + y + " years, " + m + " months, and " + d + " days";
         }
     </script>
     <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>

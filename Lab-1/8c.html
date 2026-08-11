@@ -7,25 +7,25 @@
 </head>
 <body>
     <!--This is a code no need to be changed-->
-    <div id="dateDisplay"></div>
+    <div id="dd"></div>
     <script>
-        const date = new Date();
+        const d = new Date();
 
-        date.setDate(15);
-        date.setDay(3); // Setting to Tuesday
-        date.setFullYear(2023);
-        date.setHours(10);
-        date.setMonth(5); // June (months are 0-indexed)
-        date.setMilliseconds(500);
-        date.setSeconds(30);
-        date.setMinutes(45);
-        date.setYear(2023); // Deprecated, use setFullYear instead
-        date.setUTCFullYear(2023);
-        date.setUTCDay(3); // Setting to Tuesday in UTC
-        date.setUTCDate(15);
-        date.setUTCMonth(5); // June in UTC
+        d.setDate(15);
+        d.setDay(3); // Setting to Tuesday
+        d.setFullYear(2023);
+        d.setHours(10);
+        d.setMonth(5); // June (months are 0-indexed)
+        d.setMilliseconds(500);
+        d.setSeconds(30);
+        d.setMinutes(45);
+        d.setYear(2023); // Deprecated, use setFullYear instead
+        d.setUTCFullYear(2023);
+        d.setUTCDay(3); // Setting to Tuesday in UTC
+        d.setUTCDate(15);
+        d.setUTCMonth(5); // June in UTC
 
-        document.getElementById('dateDisplay').innerText = date.toUTCString();
+        document.getElementById('dd').innerText = d.toUTCString();
     </script>
     <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
 </body>

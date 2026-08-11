@@ -13,26 +13,26 @@
     <label for="hours">Enter Hours:</label>
     <input type="number" id="hours">
     <br>
-    <button onclick="calculateDates()">Calculate</button>
+    <button onclick="CDates()">Calculate</button>
     <h2>Results:</h2>
-    <p id="beforeDate"></p>
-    <p id="afterDate"></p>
+    <p id="bd"></p>
+    <p id="ad"></p>
 
     <script>
-        function calculateDates() {
+        function CDates() {
             const days = parseInt(document.getElementById('days').value);
             const hours = parseInt(document.getElementById('hours').value);
-            const currentDate = new Date();
-            const bd = new Date(currentDate);
-            const ad = new Date(currentDate);
+            const cd = new Date();
+            const bd = new Date(cd);
+            const ad = new Date(cd);
 
-            bd.setDate(currentDate.getDate() - days);
-            bd.setHours(currentDate.getHours() - hours);
-            ad.setDate(currentDate.getDate() + days);
-            ad.setHours(currentDate.getHours() + hours);
+            bd.setDate(cd.getDate() - days);
+            bd.setHours(cd.getHours() - hours);
+            ad.setDate(cd.getDate() + days);
+            ad.setHours(cd.getHours() + hours);
 
-            document.getElementById('beforeDate').innerText = 'Date before: ' + bd.toString();
-            document.getElementById('afterDate').innerText = 'Date after: ' + ad.toString();
+            document.getElementById('bd').innerText = 'Date before: ' + bd.toString();
+            document.getElementById('ad').innerText = 'Date after: ' + ad.toString();
         }
     </script>
     <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
