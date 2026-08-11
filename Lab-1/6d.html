@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Property from JS Object</title>
-</head>
 <body>
     <h3>Delete Property in js object</h3>
     <script>
         // Creating a JavaScript object
-        let person = {
-            name: "Kimi",
+        let p = {
+            name: "MAX",
             age: 18,
             city: "Paris"
         };
         document.write("Before deletion: <br>");
-        document.write("Name: " + person.name + "<br> Age: " + person.age + "<br> City: " + person.city + "<br><br>");
+        document.write("Name: " + p.name + "<br> Age: " + p.age + "<br> City: " + p.city + "<br><br>");
         // Deleting the 'age' property
-        delete person.age;
+        delete p.age;
 
             // Displaying the updated object
         document.write("After deletion: <br>");
-        document.write("Name: " + person.name + "<br> Age: " + person.age + "<br> City: " + person.city + "<br>");
+        document.write("Name: " + p.name + "<br> Age: " + p.age + "<br> City: " + p.city + "<br>");
     </script>
     <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
 </body>

@@ -7,30 +7,30 @@
 </head>
 <body>
     <h1>Date Object</h1>
-    <div id="dateExamples"></div>
+    <div id="DE"></div>
 
     <script>
-        const dateExamples = document.getElementById('dateExamples');
+        const de = document.getElementById('DE');
 
         // 1. Using the Date constructor
-        const date1 = new Date();
-        dateExamples.innerHTML += '<p>Current Date: ' + date1 + '</p>';
+        const a = new Date();
+        de.innerHTML += '<p>Current Date: ' + a + '</p>';
 
         // 2. Using a specific date
-        const date2 = new Date('2025-12-30');
-        dateExamples.innerHTML += '<p>Specific Date: ' + date2 + '</p>';
+        const b = new Date('2025-12-30');
+        de.innerHTML += '<p>Specific Date: ' + b + '</p>';
 
         // 3. Using year, month, day
-        const date3 = new Date(2026, 3, 18); // Note: Month is 0-indexed
-        dateExamples.innerHTML += '<p>Year, Month, Day: ' + date3 + '</p>';
+        const c = new Date(2026, 3, 18); // Note: Month is 0-indexed
+        de.innerHTML += '<p>Year, Month, Day: ' + c + '</p>';
 
         // 4. Using timestamp
-        const date4 = new Date(1776118468635); // Example timestamp
-        dateExamples.innerHTML += '<p>Timestamp Date: ' + date4 + '</p>';
+        const d = new Date(1776118468635); // Example timestamp
+        de.innerHTML += '<p>Timestamp Date: ' + d + '</p>';
 
         // 5. Using UTC date
-        const date5 = new Date(Date.UTC(2026, 3, 18));
-        dateExamples.innerHTML += '<p>UTC Date: ' + date5 + '</p>';
+        const e = new Date(Date.UTC(2026, 3, 18));
+        de.innerHTML += '<p>UTC Date: ' + e + '</p>';
     </script>
     <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>
 </body>
