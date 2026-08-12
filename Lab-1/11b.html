@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pop-up Window</title>
     <script>
-        let popupWindow;
+        let puw;
 
         function openPopup() {
-            popupWindow = window.open("", "Popup", "width=400,height=300");
-            popupWindow.document.write("<h1>This is a Pop-up Window!</h1>");
-            popupWindow.document.write("<p>Close by clicking the button below.</p>");
-            popupWindow.document.write("<button onclick='window.close()'>Close</button>");
+            puw = window.open("", "Popup", "width=400,height=300");
+            puw.document.write("<h1>This is a Pop-up Window!</h1>");
+            puw.document.write("<p>Close by clicking the button below.</p>");
+            puw.document.write("<button onclick='window.close()'>Close</button>");
         }
     </script>
 </head>

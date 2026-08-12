@@ -9,17 +9,17 @@
 <body>
 
 <h3>Keyboard Event Handling</h3>
-<div id="output"></div>
+<div id="ot"></div>
 
 <script>
-    const output = document.getElementById('output');
+    const o = document.getElementById('ot');
 
     document.addEventListener('keydown', function(event) {
-        output.innerHTML = 'Key down: ' + event.key;
+        o.innerHTML = 'Key down: ' + event.key;
     });
 
     document.addEventListener('keyup', function(event) {
-        output.innerHTML += '<br>Key up: ' + event.key;
+        o.innerHTML += '<br>Key up: ' + event.key;
     });
 </script>
 <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>

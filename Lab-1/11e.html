@@ -6,12 +6,11 @@
     <title>Location Object Properties</title>
 </head>
 <body>
-    <h1>Location Object Properties</h1>
-    <button onclick="showLocationProperties()">Show Location Properties</button>
+    <button onclick="slp()">Show Location Properties</button>
     <pre id="output"></pre>
 
     <script>
-        function showLocationProperties() {
+        function slp() {
             const output = document.getElementById('output');
             output.textContent = `
                 href: ${window.location.href}

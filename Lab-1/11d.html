@@ -13,23 +13,23 @@
 </head>
 <body>
     <div id="counter">0</div>
-    <button id="startButton">Start</button>
-    <button id="stopButton">Stop</button>
+    <button id="startb">Start</button>
+    <button id="stopb">Stop</button>
 
     <script>
-        let count = 0;
-        let intervalId;
-
-        document.getElementById('startButton').addEventListener('click', function() {
-            intervalId = setInterval(function() {
-                count++;
-                document.getElementById('counter').innerText = count;
+        let c = 0;
+        let iv;
+        
+        document.getElementById('startb').addEventListener('click', function() {
+            iv = setInterval(function() {
+                c++;
+                document.getElementById('counter').innerText = c;
             }, 1000);
         });
 
-        document.getElementById('stopButton').addEventListener('click', function() {
-            clearInterval(intervalId);
-            intervalId = null;
+        document.getElementById('stopb').addEventListener('click', function() {
+            clearInterval(iv);
+            iv = null;
         });
     </script>
     <P>Lab-1/Nikrish Dulal/BCA/A/4rth</P>

@@ -6,19 +6,18 @@
     <title>Frame Object</title>
 </head>
 <body>
-    <h1>Frame Object Properties and Methods</h1>
-    <iframe id="myFrame" src="/6a.html" width="600" height="400"></iframe>
+    <iframe id="Frame" src="6a.html" width="600" height="400"></iframe>
     <button onclick="changeFrameSrc()">Change Frame Source</button>
     <button onclick="getFrameDetails()">Get Frame Details</button>
 
     <script>
         function changeFrameSrc() {
-            const frame = document.getElementById('myFrame');
+            const frame = document.getElementById('Frame');
             frame.src = "https://www.wikipedia.org";
         }
 
         function getFrameDetails() {
-            const frame = document.getElementById('myFrame');
+            const frame = document.getElementById('Frame');
             alert("Frame Source: " + frame.src + "\nFrame Width: " + frame.width + "\nFrame Height: " + frame.height);
         }
     </script>
