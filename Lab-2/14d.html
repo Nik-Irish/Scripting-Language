@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Attribute Methods</title>
+</head>
+<body>
+    <div id="div" class="ex" dinfo="Hello World">HeLLO WoRlD</div>
+    <button id="getAttr">Get Attribute</button>
+    <button id="setAttr">Set Attribute</button>
+    <button id="hasAttr">Has Attribute</button>
+    <button id="removeAttr">Remove Attribute</button>
+
+    <script>
+        const a = document.getElementById('div');
+
+        document.getElementById('getAttr').onclick = function() {
+            alert(a.getAttribute('dinfo'));
+        };
+
+        document.getElementById('setAttr').onclick = function() {
+            a.setAttribute('dinfo', 'New Info');
+            alert('Attribute set!');
+        };
+
+        document.getElementById('hasAttr').onclick = function() {
+            alert(a.hasAttribute('dinfo') ? 'Attribute exists!' : 'Attribute does not exist.');
+        };
+
+        document.getElementById('removeAttr').onclick = function() {
+            a.removeAttribute('dinfo');
+            alert('Attribute removed!');
+        };
+    </script>
+</body>
+</html>

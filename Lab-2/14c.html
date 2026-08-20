@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Manipulation Example</title>
+</head>
+<body>
+    <h1>Node Manipulation Example</h1>
+    <div id="parent">
+        <p id="child">I am a child node.</p>
+    </div>
+    <button id="create">Create Node</button>
+    <button id="insert">Insert Node</button>
+    <button id="replace">Replace Node</button>
+    <button id="remove">Remove Node</button>
+
+    <script>
+        document.getElementById('create').onclick = function() {
+            const newNode = document.createElement('p');
+            newNode.textContent = 'I am a newly created node.';
+            document.getElementById('parent').appendChild(newNode);
+        };
+
+        document.getElementById('insert').onclick = function() {
+            const newNode = document.createElement('p');
+            newNode.textContent = 'I am an inserted node.';
+            const referenceNode = document.getElementById('child');
+            document.getElementById('parent').insertBefore(newNode, referenceNode);
+        };
+
+        document.getElementById('replace').onclick = function() {
+            const newNode = document.createElement('p');
+            newNode.textContent = 'I am a replaced node.';
+            const oldNode = document.getElementById('child');
+            document.getElementById('parent').replaceChild(newNode, oldNode);
+        };
+
+        document.getElementById('remove').onclick = function() {
+            const nodeToRemove = document.getElementById('child');
+            document.getElementById('parent').removeChild(nodeToRemove);
+        };
+    </script>
+</body>
+</html>

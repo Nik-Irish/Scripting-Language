@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting Document Elements</title>
+</head>
+<body>
+    <h1 id="header">Hello, World!</h1>
+    <p class="text">Nik.</p>
+    <p class="text">This is another paragraph.</p>
+    <div name="myDiv">This is a div element.</div>
+    <span>Just a span element.<br></span>
+
+    <script>
+        // Selecting element by ID
+        const headerElement = document.getElementById('header');
+        document.write('Header Element: ' + headerElement.innerText + '<br>');
+        
+        // Selecting elements by name
+        const divElements = document.getElementsByName('myDiv');
+        document.write('Div Elements: ' + divElements.length + '<br>');
+        
+        // Selecting elements by tag type
+        const paragraphElements = document.getElementsByTagName('p');
+        document.write('Paragraph Elements: ' + paragraphElements.length + '<br>');
+        
+        // Selecting elements by CSS class
+        const textElements = document.getElementsByClassName('text');
+        document.write('Text Elements: ' + textElements.length + '<br>');
+        
+        // Selecting element by querySelector()
+        const firstParagraph = document.querySelector('p');
+        document.write('First Paragraph: ' + firstParagraph.innerText + '<br>');
+        
+        // Selecting element by querySelectorAll()
+        const allTextElements = document.querySelectorAll('.text');
+        document.write('All Text Elements: ' + allTextElements.length + '<br>');
+    </script>
+</body>
+</html>
