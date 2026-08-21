@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Patterns Test</title>
+</head>
+<body>
+    <h1>Regex Patterns Test</h1>
+    <script>
+        const testStrings = [
+            "Hello World",
+            "What is this?",
+            "A simple test.",
+            "Only one space",
+            "NoDigitsAllowed!",
+            "Symbol$Here",
+            "NoSpecialChars",
+            "word1@word2",
+            "1startWithDigit",
+            "_startWithUnderscore",
+            "BCA-TU-123456",
+            "example@gmail.com",
+            "A vowel here",
+            "1234567890",
+            "test@gmail.edu.np",
+            "test@yahoo.com",
+            "Nepal is beautiful"
+        ];
+
+        const regexPatterns = {
+            uppercase: /^[A-Z].*$/,
+            questionDashUnderscore: /[?_-]/,
+            startsWithAorAEndsWithPunct: /^[Aa].*[.!]$/,
+            oneBlankSpace: /^[^ ]* [^ ]*$/,
+            noDigits: /^[^\d]*$/,
+            containsSymbol: /[,@$%&*^~\-+(){}[\]:.]/,
+            noSpecialCharsOrDigits: /^[A-Za-z\s]*$/,
+            atSymbolBetweenWords: /^[A-Za-z]+@[A-Za-z]+$/,
+            noStartWithDigit: /^[^\d].*$/,
+            startWithUnderscoreOrAlpha: /^[A-Za-z_].*$/,
+            startsWithBCA: /^BCA-TU-\d+$/,
+            emailFormat: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            containsVowel: /[aeiouAEIOU]/,
+            tenDigits: /^(?!0)\d{10}$/,
+            emailEndsWithEduNp: /^[^\s@]+@[^\s@]+\.edu\.np$/,
+            emailContainsGmailOrYahoo: /^[^\s@]+@(gmail|yahoo)\.com$/,
+            containsNepal: /nepal/i
+        };
+
+        testStrings.forEach(str => {
+            for (const [key, regex] of Object.entries(regexPatterns)) {
+                document.write(`${key}: ${regex.test(str)}<br>`);
+            }
+        });
+    </script>
+</body>
+</html>

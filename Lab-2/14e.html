@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book Records</title>
+    <style>
+        .book-row {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Book Records</h1>
+    <form id="bookForm">
+        <div id="bookRows">
+            <div class="book-row">
+                <input type="text" value="100" readonly>
+                <input type="text" placeholder="Title">
+                <input type="text" placeholder="Author">
+                <input type="number" placeholder="Price">
+                <button type="button" onclick="addBookRow()">+</button>
+            </div>
+        </div>
+        <button type="submit" style="margin-top: 20px;">Save</button>
+    </form>
+
+    <script>
+        let bookId = 100;
+
+        function addBookRow() {
+            bookId++;
+            const newRow = document.createElement('div');
+            newRow.className = 'book-row';
+            newRow.innerHTML = `
+                <input type="text" value="${bookId}" readonly>
+                <input type="text" placeholder="Title">
+                <input type="text" placeholder="Author">
+                <input type="number" placeholder="Price">
+                <button type="button" onclick="addBookRow()">+</button>
+            `;
+            document.getElementById('bookRows').appendChild(newRow);
+        }
+    </script>
+</body>
+</html>

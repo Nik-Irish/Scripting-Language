@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions in JavaScript</title>
+</head>
+<body>
+    <script>
+        // Two ways of creating a regular expression
+        const Literal = /hello/; // Literal notation
+        const Constructor = new RegExp('hello'); // Constructor notation
+
+        const test = "hello world, hello Bipin Sir";
+
+        // Using exec()
+        console.log(Literal.exec(test));
+
+        // Using test()
+        console.log(Literal.test(test));
+
+        // Using match()
+        console.log(test.match(Literal));
+
+        // Using matchAll()
+        console.log([...test.matchAll(Literal)]);
+
+        // Using search()
+        console.log(test.search(Literal));
+
+        // Using replace()
+        console.log(test.replace(Literal, 'hi'));
+
+        // Using replaceAll()
+        console.log(test.replaceAll(Literal, 'hi'));
+
+        // Using split()
+        console.log(test.split(Literal));
+    </script>
+</body>
+</html>

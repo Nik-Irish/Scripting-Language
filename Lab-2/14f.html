@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Districts List</title>
+</head>
+<body>
+    <h1>Districts of My Provenience</h1>
+    <ul id="districts-list"></ul>
+
+    <script>
+        const districts = ['Kathmandu', 'Lalitpur', 'Bhaktapur', 'Makwanpur'];  
+
+        const list = document.getElementById('districts-list');
+
+        districts.forEach(district => {
+            const listItem = document.createElement('li');
+            listItem.textContent = district;
+            list.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>

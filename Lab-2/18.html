@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Management</title>
+    <script>
+        // Different ways of cookie creation
+        function createCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        // Reading cookie
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Changing cookie
+        function changeCookie(name, value, days) {
+            createCookie(name, value, days);
+        }
+
+        // Deleting cookie
+        function deleteCookie(name) {
+            createCookie(name, "", -1);
+        }
+
+        // Demonstration
+        function demoCookies() {
+            createCookie("testCookie", "Hello World", 7);
+            document.getElementById("cookieValue").innerText = "Cookie Value: " + readCookie("testCookie");
+            changeCookie("testCookie", "New Value", 7);
+            document.getElementById("changedValue").innerText = "Changed Cookie Value: " + readCookie("testCookie");
+            deleteCookie("testCookie");
+            document.getElementById("deletedValue").innerText = "Deleted Cookie Value: " + readCookie("testCookie");
+        }
+    </script>
+</head>
+<body onload="demoCookies()">
+    <h1>Cookie Management Demonstration</h1>
+    <p id="cookieValue"></p>
+    <p id="changedValue"></p>
+    <p id="deletedValue"></p>
+</body>
+</html>
